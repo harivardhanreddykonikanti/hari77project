@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid homework</title>
+    <style>
+        #container{
+            display: grid;
+            height: 500px;
+            width: 500px;
+            background-color: #872ec4;
+            grid-template-rows: auto auto;
+            grid-template-columns: auto auto;
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+        .containeritems{
+            height: auto;
+            width: auto;
+            background-color: #a00423;
+        }
+        h1{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="containeritems" id="merge"><h1>one</h1></div>
+    <div class="containeritems"><h1>two</h1></div>
+    <div class="containeritems"><h1>three</h1></div>
+
+</div>
+
+</body>
+</html>

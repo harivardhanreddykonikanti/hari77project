@@ -1,0 +1,65 @@
+body{
+    font-family: Calibri,sans-serif;
+    background-color:whitesmoke;
+    margin:0 0 0px;
+}
+.virat{
+    width: 700px;
+    height: 300px;
+    border: 2px solid blue;
+    box-shadow: 0 0 20px black;
+    margin-top: 150px;
+    margin-left: 300px;
+    border-radius: 20px;
+}
+.rohit{
+    width: 700px;
+    height: 300px;
+    border: 2px solid blue;
+    box-shadow: 0 0 20px black;
+    margin-top: 100px;
+    margin-left: 300px;
+    border-radius: 20px;
+}
+.viratimg{
+    float: left;
+    border-radius: 50%;
+}
+.viratpara{
+    width: 400px;
+    padding: 10px;
+    float: right;
+    text-align: justify;
+}
+.rohitpara{
+    width: 400px;
+    padding: 10px;
+    float: left;
+    text-align: justify;
+}
+h2{
+    text-align: center;
+}
+.rohitimg{
+    float: right;
+    border-radius: 50%;
+}
+.viratreadmore{
+    float: right;
+    margin-right: 80px;
+}
+.rohitreadmore{
+    float: right;
+    margin-right: 550px;
+}
+h1{
+    text-align: center;
+    background: lightslategrey;
+    padding: 10px;
+    margin: 0 0 0px;
+}
+input:hover{
+    color: blue;
+    background: lightcoral;
+}
+

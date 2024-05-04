@@ -1,0 +1,60 @@
+body{
+    font-family: Calibri,sans-serif;
+    margin: 0 0 0px;
+    background: lightslategrey;
+}
+heading{
+    text-align: center;
+}
+#button{
+
+}
+#readmoretext{
+    display: none;
+}
+div{
+    height: 1000px;
+    width: 400px;
+    box-shadow: 0 0 10px black;
+    display: inline-block;
+    margin: 15px 15px 15px;
+}
+p{
+    padding: 10px;
+    text-align: justify;
+}
+.mukeshimg{
+    margin-left: 100px;
+    border-radius: 50%;
+}
+h2 {
+    text-align: center;
+}
+.adaniimg{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin-left: 90px;
+}
+.ambanicomp{
+    background-color: coral;
+}
+.adanicomp{
+    background-color: lightblue;
+}
+.shivcomp{
+    background-color: chocolate;
+}
+h1{
+    background-color: black;
+    color: whitesmoke;
+    padding: 30px;
+    margin: 0 0 0px;
+}
+input{
+    margin-left: 120px;
+}
+input:hover{
+    color: gold;
+    background-color: green;
+}

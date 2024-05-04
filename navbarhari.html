@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>navhari</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navigationbar{
+            height: 80px;
+            width: 100%;
+            background-color: #872ec4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5%;
+        }
+        .navigationbar ul{
+            list-style: none;
+            display: flex;
+        }
+        .navigationbar ul li{
+            position: relative;
+            padding: 10px 30px;
+        }
+        .navigationbar ul li a{
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 20px;
+            transition: 0.5s;
+        }
+        .navigationbar ul li a:hover{
+            color: #667eea;
+        }
+        .dropmenu{
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #872ec4;
+        }
+        .dropmenu{
+            display:none;
+        }
+        .dropmenu ul{
+            display: block;
+            margin: 10px;
+        }
+        .dropmenu ul li{
+            width: 150px;
+            padding: 10px;
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 20px;
+            transition: 0.5s;
+        }
+        .navigationbar ul li:hover .dropmenu{
+            display: block;
+        }
+        h1{
+            color: whitesmoke;
+        }
+        span{
+            color: #756d6c;
+        }
+        #home2{
+            height: 450px;
+            width: 600px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 20px;
+            position: relative;
+        }
+        #home2 img{
+            position: absolute;
+            top: 5px;
+            left: 18px;
+        }
+        #home2 p{
+            position: absolute;
+            top: 230px;
+            text-align: justify;
+            padding: 10px;
+        }
+        #home h1{
+            text-align: center;
+            color: black;
+            background: whitesmoke;
+        }
+        #home{
+            display:none ;
+        }
+
+        .freindslist2{
+            height: 200px;
+            width: 800px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 20px;
+            position: relative;
+        }
+        .freindslist2 img{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+        .freindslist2 p{
+            position: absolute;
+            top: 40px;
+            text-align: justify;
+            padding: 10px;
+            width: 450px;
+            left: 330px;
+        }
+        #freindslist h1{
+            text-align: center;
+            color: black;
+            background: whitesmoke;
+        }
+        #freindslist{
+        display: none;
+        }
+        .freindslist2 h2{
+            position: absolute;
+            left: 400px;
+        }
+        .dropmenu ul li {
+            font-size: 15px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="navigationbar">
+    <h1>face<span>book</span></h1>
+    <ul>
+        <li>  <a onclick="home()" href="#"><p id="homename">HOME</p></a></li>
+        <li> <a onclick="freinds()" href="#">FRIENDS LIST</a></li>
+        <li> <a href="#">GROUPS</a>
+            <div class="dropmenu">
+                <ul>
+                    <li> <a href="#"></a>SCHOOL FREINDS</li>
+                    <li> <a href="#"></a>INTER FREINDS</li>
+                    <li> <a href="#"></a>B TECH FREINDS</li>
+                    <li> <a href="#"></a>COOL GUYS</li>
+                </ul>
+
+            </div>
+        </li>
+        <li> <a href="#">REPORT</a></li>
+        <li> <a href="#">LOGOUT</a></li>
+    </ul>
+
+</div>
+<div id="home">
+    <h1>HOME PAGE</h1>
+<div id="home2">
+        <img src="images/CIR3.jpg" height="200px" width="550px"/>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolorem ea earum illum ipsum minima nam nesciunt possimus vel velit. Accusantium architecto asperiores, assumenda commodi cum, cumque dicta dolorem dolorum earum ex exercitationem hic incidunt ipsa iste iure laudantium neque nostrum nulla obcaecati omnis possimus quas quia quis quisquam repudiandae sit unde? Aliquid aperiam distinctio est fugit id, inventore maiores veniam! A ad amet autem dicta, eos explicabo impedit inventore ipsum magni maxime nesciunt nisi non quia quidem quisquam, quod reiciendis reprehenderit sint. Aliquam animi consectetur cumque eos esse facere, incidunt inventore ipsam labore molestias nihil placeat quae quam ratione saepe sequi similique ullam veritatis! Culpa illo magni, natus nihil nostrum, obcaecati odio quaerat quidem quisquam sequi soluta veritatis? Consequatur dignissimos odio quo ratione vel.</p>
+
+
+</div>
+</div>
+<div id="freindslist">
+    <h1>FRIENDS LIST</h1>
+    <div class="freindslist2">
+        <h2>harivardhann</h2>
+        <img src="images/CIR3.jpg" height="170px" width="300px"/>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At debitis fugiat incidunt nemo quasi. At delectus eius impedit officia pariatur repudiandae sequi suscipit, tempora tempore voluptatem. Ab alias animi, beatae corporis doloremque eius eligendi et facere fugiat in ipsum labore minima nulla numquam odit quaerat quis quo quos sint unde. Architecto corporis doloribus, et harum iusto labore provident similique suscipit.</p>
+
+
+    </div>
+    <div class="freindslist2">
+        <h2>harivardhann</h2>
+        <img src="images/CIR3.jpg" height="170px" width="300px"/>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At debitis fugiat incidunt nemo quasi. At delectus eius impedit officia pariatur repudiandae sequi suscipit, tempora tempore voluptatem. Ab alias animi, beatae corporis doloremque eius eligendi et facere fugiat in ipsum labore minima nulla numquam odit quaerat quis quo quos sint unde. Architecto corporis doloribus, et harum iusto labore provident similique suscipit.</p>
+
+
+    </div>
+    <div class="freindslist2">
+        <h2>harivardhann</h2>
+        <img src="images/CIR3.jpg" height="170px" width="300px"/>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At debitis fugiat incidunt nemo quasi. At delectus eius impedit officia pariatur repudiandae sequi suscipit, tempora tempore voluptatem. Ab alias animi, beatae corporis doloremque eius eligendi et facere fugiat in ipsum labore minima nulla numquam odit quaerat quis quo quos sint unde. Architecto corporis doloribus, et harum iusto labore provident similique suscipit.</p>
+
+
+    </div>
+</div>
+<script src="navbarhari.js"></script>
+</body>
+</html>

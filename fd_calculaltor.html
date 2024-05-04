@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FD CALCULATOR</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: #7351ab;
+            color: whitesmoke;
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            font-size: 30px;
+            padding: 10px;
+
+        }
+        body{
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            font: bolder;
+        }
+        #container{
+            height: 500px;
+            width: 700px;
+            border: 5px solid black;
+            margin: 0 auto;
+        }
+        input{
+            margin-top: 20px;
+            margin-left: 60px;
+        }
+        label{
+            margin-top: 10px;
+            margin-left: 100px;
+        }
+        #submit{
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+        #result{
+            margin-left: 0px;
+        }
+    </style>
+</head>
+<h1>FD CALCULATOR</h1>
+<div id="container">
+    <label for="principal">PRINCIPAL</label>
+    <input type="number" id="principal" placeholder="please enter principal"><br>
+    <label for="intrest">INTREST</label>
+    <input type="number" id="intrest" placeholder="please enter intrest"><br>
+    <label for="tenure">TENURE</label>
+    <input type="number" id="tenure" placeholder="please enter tenure"><br>
+    <button id="submit" onclick="fdcal()" value="CALCULATE">CALCULATE</button><br>
+    <label for="result">MATURE AMOUNT IS</label>
+    <input type="number" id="result">
+
+
+
+</div>
+<body>
+</body>
+<script src="FD_CALCULATOR.js"></script>
+</html>

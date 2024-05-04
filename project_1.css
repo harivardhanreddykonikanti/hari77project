@@ -1,0 +1,52 @@
+h1{
+ font: bolder;
+
+}
+
+h1{
+    text-align: center;
+    color:gold;
+
+}
+body{
+    font-family: Calibri,sans-serif;
+    background-color: lightslategrey;
+}
+div{
+    box-shadow: 0 0 10px black;
+    margin: 20px;
+    padding: 20px;
+}
+p{
+    width: 1050px;
+    float: right;
+    text-align:justify;
+}
+.csk{
+    display: inline-block;
+    background-color: yellow;
+}
+.rcb{
+    display: inline-block;
+    background-color: #a00423;
+}
+h2{
+    text-align: center;
+}
+.srhlogo{
+    border-radius: 50%;
+}
+.srh{
+    background-color: orange;
+}
+.milogo{
+    border-radius: 50%;
+}
+.mi{
+    background-color: dodgerblue;
+    margin: 20px;
+    display: inline-block;
+}
+img{
+    cursor:pointer;
+}

@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projectk</title>
+    <style>
+        #header{
+            background: linear-gradient(45deg,#0f0617,#211733,rgb(26, 16, 40),rgb(15, 6, 23));
+            margin: 0px;
+        }
+        #header h1{
+            padding: 15px;
+            margin-left: 70px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: calibri,sans-serif;
+        }
+        .navigationbar{
+            height: 40px;
+            width: 100%;
+            background-color: #872ec4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1%;
+        }
+        .navigationbar ul{
+            list-style: none;
+            display: flex;
+        }
+        .navigationbar ul li{
+            position: relative;
+            padding: 10px 20px;
+        }
+        .navigationbar ul li a{
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 19px;
+            transition: 0.5s;
+        }
+        .navigationbar ul li a:hover{
+            color: #667eea;
+            background: #2a0344;
+            padding: 10px;
+        }
+        .dropmenu a:hover{
+            color: #667eea;
+            background: #2a0344;
+            padding: 10px;
+        }
+        #homename:hover{
+            color: #667eea;
+            background: #2a0344;
+        
+
+        }
+        .dropmenu{
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #872ec4;
+        }
+        .dropmenu{
+            display:none;
+        }
+        .dropmenu ul{
+            display: block;
+            margin: 10px;
+        }
+        .dropmenu ul li{
+            width: 150px;
+            padding: 10px;
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 20px;
+            transition: 0.5s;
+        }
+        .navigationbar ul li:hover .dropmenu{
+            display: block;
+        }
+        #homename{
+            margin-left: 30px;
+        }
+        .grid-box{
+            display: grid;
+            grid-template-rows: repeat(80,1fr);
+            grid-template-columns: repeat(80,1fr);
+           height: 1800px;
+           width: 900px;
+           row-gap: 5px;!important;
+           column-gap: 10px;
+        }
+        .slider{
+            margin-top: 40px;
+            
+            grid-row-start: 2;
+            grid-row-end: 20;
+            grid-column-start: 2;
+            grid-column-end: 80;
+        }
+        .container{
+        height: 350px;
+        width: 750px;
+        position: relative;
+        top: 130px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border: 10px solid white;
+        border-radius: 8px;
+        box-shadow: 10px 25px 25px black;
+        overflow: hidden;
+    }
+    .img-container {
+        width: 100%;
+        display: flex;
+        animation:slide 16s infinite;
+    }
+    .img-container img{
+        width: 100%;
+    }
+    @keyframes slide{
+        0%{
+            transform: translateX(0);
+        }
+        25%{
+            transform: translateX(0);
+        }
+        30%{
+            transform: translateX(-100%);
+        }
+        50%{
+            transform: translateX(-100%);
+        }
+        55%{
+            transform: translateX(-200%);
+        }
+        75%{
+            transform: translateX(-200);
+        }
+        80%{
+            transform: translateX(-300);
+        }
+        100%{
+            transform: translateX(-300);
+        }
+        
+    }
+        .featurevideos{
+            
+            grid-row-start: 2;
+            grid-row-end: 20;
+            grid-column-start: 80;
+            grid-column-end: 130;
+        }
+        .tvshedules{
+            background:#872ec4;
+            grid-row-start: 21;
+            grid-row-end: 45;
+            grid-column-start: 2;
+            grid-column-end: 40;
+            margin-top: -10PX;
+            
+        }
+        .tvshedules:hover{
+            background: #0f0617;
+            table{
+                width: 400px;
+                height: 220px;
+                color: lightblue;
+            }
+        }
+        table{
+            width: 380px;
+            text-align: center;
+            margin: 10px;
+            font-size: 18px;
+            padding: 20px;
+            height: 200px;
+            margin-left: -10px;
+            margin-top: -20px;
+            color: white;
+            
+            
+        }
+        body{
+            background-color: #0f0617;
+        }
+        th,td {
+            background-color: #2a0344;
+            padding: 5px;
+        
+        }
+
+        .primetime{
+            background:#872ec4;
+            grid-row-start: 21;
+            grid-row-end: 45;
+            grid-column-start: 40;
+            grid-column-end: 90;
+            margin-top: -10PX;
+            display: inline-block;
+            
+        }
+        .whatsnew{
+            background: #872ec4;
+            grid-row-start: 21;
+            grid-row-end: 45;
+            grid-column-start: 90;
+            grid-column-end: 130;
+            margin-top: -10PX;
+        }
+        #whatsnew1{
+            border: 2px solid black;
+            height: 220px;
+            width: 380px;
+            margin-top: 5px;
+            margin-left: 5px;
+            border-radius: 5%;
+        }
+        #whatsnew img{
+            border-radius: 50%;
+        }
+        #whatsnew h1{
+            text-align: center;
+            background-color: black;
+            color: whitesmoke;
+            padding: 30px;
+            margin-top: 0px;
+        }
+        #whatsnew div{
+            width: 900px;
+            box-shadow: 0 0 20px green;
+            text-align:center;
+            padding: 10px;
+            margin-left: 180px;
+            margin-top: 30px;
+
+        }
+        #whatsnew p{
+            text-align: justify;+
+
+        }
+
+
+        #whatsnew2{
+            border: 2px solid black;
+            height: 210px;
+            width: 380px;
+            margin-top: 5px;
+            margin-left: 5px;
+            border-radius: 5%;
+        }
+        .megaserials{
+            background: #872ec4;
+            grid-row-start: 46;
+            grid-row-end: 70;
+            grid-column-start: 2;
+            grid-column-end: 90;
+            margin-top: -10PX;
+            display: inline-block;
+        }
+        #megaserials1{
+            border: 2px solid black;
+            height: 430px;
+            width: 280px;
+            display: inline-block;
+            margin-left: 5px;
+            border-radius: 5%;
+        }
+        #megaserials2{
+            border: 2px solid black;
+            height: 430px;
+            width: 280px;
+            display: inline-block;
+            border-radius: 5%;
+        }
+        #megaserials3{
+            border: 2px solid black;
+            height: 430px;
+            width: 280px;
+            display: inline-block;
+            border-radius: 5%;
+        }
+        .topshows{
+            background:#872ec4;
+            grid-row-start: 46;
+            grid-row-end: 120;
+            grid-column-start: 90;
+            grid-column-end: 130;
+            margin-top: -10PX;
+        }
+        #topshows1{
+             border: 2px solid black;
+            height: 210px;
+            width: 380px;
+            margin-top: 5px;
+            margin-left: 5px;
+            border-radius: 5%;
+
+        }
+        #topshows2{
+             border: 2px solid black;
+            height: 210px;
+            width: 380px;
+            margin-top: 5px;
+            margin-left: 5px;
+            border-radius: 5%;
+
+        }
+        #topshows3{
+             border: 2px solid black;
+            height: 210px;
+            width: 380px;
+            margin-top: 5px;
+            margin-left: 5px;
+            border-radius: 5%;
+
+        }
+        #topshows4{
+             border: 2px solid black;
+            height: 210px;
+            width: 380px;
+            margin-top: 5px;
+            margin-left: 5px;
+            border-radius: 5%;
+
+        }
+    
+        .othershows{
+            background: #872ec4;
+            grid-row-start: 71;
+            grid-row-end: 120;
+            grid-column-start: 2;
+            grid-column-end: 90;
+            margin-top: -10PX;
+            display: inline-block;
+        }
+        #othershows1{
+            display: inline-block;
+            height: 350px;
+            width: 280px;
+            border: 2px solid black;
+            margin-top: 10px;
+            margin-left: 5px;
+            border-radius: 5%;
+        }
+        #othershows2{
+            display: inline-block;
+            height: 350px;
+            width: 280px;
+            border: 2px solid black;
+            border-radius: 5%;
+        }
+        #othershows3{
+            display: inline-block;
+            height: 350px;
+            width: 280px;
+            border: 2px solid black;
+            border-radius: 5%;
+        }
+        footer{
+            padding: 20px;
+            background: linear-gradient(45deg,#0f0617,#211733,rgb(26, 16, 40),rgb(15, 6, 23));;
+            margin-top: 10px;
+        }
+        #primetime1{
+            border: 2px solid black;
+            width: 230px;
+            height: 440px;
+            margin-left: 5px;
+            margin-top: 5px;
+            display: inline-block;
+            float: left;
+            border-radius: 5%;
+        }
+        #primetime1:hover{
+            width: 240px;
+            height: 430px;
+            background-color: #2a0344;
+            img{
+                height: 250px;
+            width: 210px;            
+            }
+            h3{
+                color: rgb(206, 56, 56);
+            }
+            p{
+                color: white;
+            }
+
+        }
+        #primetime2:hover{
+            width: 240px;
+            height: 430px;
+            background-color: #2a0344;
+            img{
+                height: 250px;
+            width: 210px;            
+            }
+            h3{
+                color: rgb(206, 56, 56);
+            }
+            p{
+                color: white;
+            }
+
+        }
+        #whatsnew1:hover{
+            background-color: #2a0344;
+            width: 390px;
+            height: 220px;     
+            h3{
+                color: rgb(206, 56, 56);
+            }
+            p{
+                color: white;
+            } 
+        }
+        #whatsnew2:hover{
+            background-color: #2a0344;
+            width: 390px;
+            height: 220px;     
+            h3{
+                color: rgb(206, 56, 56);
+            }
+            p{
+                color: white;
+            }         
+        }
+        #megaserials1:hover{
+            width: 280px;
+            height: 430px;
+            background-color: #2a0344;
+            img{
+                height: 250px;
+            width: 210px;            
+            }
+            h3{
+                color: rgb(206, 56, 56);
+            }
+            p{
+                color: white;
+            }            
+        }
+        #megaserials2:hover{
+            width: 280px;
+            height: 430px;
+            background-color: #2a0344;
+            img{
+                height: 250px;
+            width: 210px;            
+            }
+            h3{
+                color: rgb(206, 56, 56);
+            }
+            p{
+                color: white;
+            }            
+        }
+        #megaserials3:hover{
+            width: 280px;
+            height: 430px;
+            background-color: #2a0344;
+            img{
+                height: 250px;
+            width: 210px;            
+            }
+            h3{
+                color: rgb(206, 56, 56);
+            }
+            p{
+                color: white;
+            }            
+        }
+        #topshows1:hover{
+            background-color: #2a0344;
+            width: 390px;
+            height: 220px;     
+            h3{
+                color: rgb(206, 56, 56);
+            }
+            p{
+                color: white;
+            } 
+
+        }
+        #topshows4:hover{
+            background-color: #2a0344;
+            width: 390px;
+            height: 220px;     
+            h3{
+                color: rgb(206, 56, 56);
+            }
+            p{
+                color: white;
+            } 
+
+        }
+        #topshows2:hover{
+            background-color: #2a0344;
+            width: 390px;
+            height: 220px;     
+            h3{
+                color: rgb(206, 56, 56);
+            }
+            p{
+                color: white;
+            } 
+
+        }
+        #topshows3:hover{
+            background-color: #2a0344;
+            width: 390px;
+            height: 220px;     
+            h3{
+                color: rgb(206, 56, 56);
+            }
+            p{
+                color: white;
+            } 
+
+        }
+        #othershows1:hover{           
+            background-color: #2a0344;
+            p{
+                color: white;
+            }
+            h2{
+                color: #667eea;
+            }
+            
+           
+        }
+        #othershows2:hover{           
+            background-color: #2a0344;
+            p{
+                color: white;
+            }
+            h2{
+                color: #667eea;
+            }
+            
+           
+        }
+        #othershows3:hover{           
+            background-color: #2a0344;
+            p{
+                color: white;
+            }
+            h2{
+                color: #667eea;
+            }
+            
+           
+        }
+          
+          
+       
+
+        #primetime2{
+            border: 2px solid black;
+            width: 230px;
+            height: 440px;
+            margin-right: 5px;
+            margin-top: 5px;
+            display: inline-block;
+            float: right;
+            border-radius: 5%;
+        }
+       
+        #primetime div{
+            box-shadow: 0 0 10px black;
+            padding: 10px;
+            margin: 10px;
+
+        }
+       #primetime div h3{
+        text-align: center;
+       }
+       #intro{
+            
+        }
+        #tvshedules{
+            display: none;
+        }
+       #primetime{
+        display: none;
+       }
+       #whatsnew{
+        display: none;
+       }
+       span{
+        color: #667eea;!important;
+       }
+       #whatsnew{
+        
+       }
+       #whatsnew h1{
+        padding: 5px;
+       }
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/012/657/549/small/illustration-negative-film-reel-roll-tapes-for-movie-cinema-video-logo-vector.jpg" height="65px" width="100px" style="float: left; border-radius: 50%;">
+        <h1 style="margin-left: 100px; color: white;"><span>MOVIE</span> RULZ</h1>
+    </div>
+    <div class="navigationbar">
+        <ul>
+            <li>  <a onclick="homebutton()" href="#"><p id="homename">HOME</p></a></li> 
+             <li> <a onclick="tvshedulesbutton()" href="#">UPCOMING MOVIES</a></li>
+            <li> <a onclick="primetimebutton()" href="#">PRIME TIME</a></li>
+            <li> <a onclick="whatsnewbutton()" href="#">WHATS NEW</a></li>
+             <li> <a onclick="megaserialsbutton()" href="#">MEGA SERIALS</a></li>
+             <li> <a onclick="topshowsbutton()" href="#">TOP SHOWS</a></li>
+
+            
+            <li> <a href="#">LANGUAGES</a>
+                <div class="dropmenu">
+                    <ul>
+                        <li> <a href="#"></a>TELUGU</li>
+                        <li> <a href="#"></a>ENGLISH</li>
+                        <li> <a href="#"></a>HINDI</li>
+                        <li> <a href="#"></a>KOREAN</li>
+                    </ul>
+    
+                </div>
+            </li>
+            <li> <a href="#">UPDATES</a></li>
+            <li> <a href="forms_homework.html" target="_blank">LOGIN</a></li>
+        </ul>
+    
+    </div>
+    <div id="intro">
+    <div class="grid-box">
+        <div class="slider">
+            <div class="container">
+                <div class="img-container">
+                    <img src="https://pbs.twimg.com/media/GHfYE4AaYAAAlcR.jpg:large" height="400px" width="600px" alt="">
+                    <img src="https://i0.wp.com/bestoftheyear.in/wp-content/uploads/2018/06/kick-2.jpg?fit=400%2C567&ssl=1"height="400px" width="600px" alt="">
+                    <img src="https://pbs.twimg.com/media/CpBEaPaUIAQJpRK.jpg" height="400px" width="600px" alt="">
+                    <img src="https://images.filmibeat.com/ph-big/2024/02/eagle_170745242130.jpg" height="400px" width="600px alt="">
+                    <img src="https://i.pinimg.com/736x/d0/b9/ec/d0b9ec3a33c3b8627f9b1c6958b8fb3d.jpg" height="400px" width="600px alt="">" height="400px" width="600px alt="">
+                    <img src=https://i0.wp.com/www.socialnews.xyz/wp-content/uploads/2019/12/31/Vishwak-Sen-s-Hit-Movie-Latest-Poster-.jpg?fit=1024%2C1280&quality=80&zoom=1&ssl=1 height="400px" width="600px alt="">
+                    <img src="https://pbs.twimg.com/media/FHyYgOMVkAA-VQy?format=jpg&name=medium height="400px" width="600px alt="">
+                    <img src="https://xl.movieposterdb.com/23_11/2024/26439764/xl_kantara-2-movie-poster_05804f31.jpg" height="400px" width="600px alt="">            
+        
+                </div>
+            </div>
+
+        </div>
+        <div class="featurevideos">
+            <h4 style="text-align: center; color: white; background-color:  #2a0344; border-radius: 20px 20px 0px 0px;padding: 5px;margin-top: -10px;">FUTURE VIDEOS</h4>
+            <iframe src="https://www.youtube.com/embed/rc61YHl1PFY?si=yRYBNqlFDrVNVohy" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"allow="autoplay" height="330px" width="100%" autoplay loop muted style="border-radius: 10px; margin-top: -5px;"></iframe>
+            
+        </div>
+        <div class="tvshedules" onclick="tvshedulesbutton()">
+             <h1 style="text-align: center; color: white; background:  #2a0344;">UPCOMING MOVIES</h1>
+             <table>
+                <thead>
+                <tr>
+                    <th>S.NO</th>
+                    <th>MOVIE NAME</th>
+                    <th>RELESE DATE</th>
+                    
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td><td>PUSPHA</td><td>23 JAN</td>
+                </tr>
+                <tr>
+                    <td>2</td><td>RRR</td><td>4 FEB</td>
+                </tr>
+                <tr>
+                    <td>3</td><td>AKANDA</td><td>6 MAR</td>
+                </tr>
+                <tr>
+                    <td>4</td><td>LEGEND</td><td>5 APR</td>
+                </tr>
+                <tr>
+                    <td>5</td><td>IRONMAN</td><td>8 MAY</td>
+                </tr>
+                <tr>
+                    <td>6</td><td>THOR</td><td>5 JUN</td>
+                </tr>
+                <tr>
+                    <td>7</td><td>HULK</td><td>23 JUL</td>
+                </tr>
+                <tr>
+                    <td>8</td><td>ROCK</td><td>5 AUG</td>
+                </tr>
+                <tr>
+                    <td>9</td><td>ANTMAN</td><td>23 SEP</td>
+                </tr>
+                <tr>
+                    <td>10</td><td>LOKI</td><td>10 OCT</td>
+                </tr>
+                <tr>
+                    <td>11</td><td>AQUA MAN</td><td>2 NOV</td>
+                </tr>
+                <tr>
+                    <td>12</td><td>KRISH</td><td>5 DEC</td>
+                </tr>
+            
+                </tbody>
+            </table>
+        
+        </div>
+        <div class="primetime" onclick="primetimebutton()">
+            <h1 style="text-align: center; color: white; background:  #2a0344;">PRIME TIME NIGHT</h1>
+            <div id="primetime1">
+                <img src="https://i.pinimg.com/736x/7d/3c/9a/7d3c9a388c66e852608a1acbb51dc30b.jpg" height="250px" width="200px" style="margin-left: 10px; margin-top: 10px;" alt="" srcset="">
+                <h3 style="text-align: center; color: white;">ARJUN REDDY</h3>
+                <p style="text-align:justify; margin-left: 5px; margin-right: 5px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus culpa, at eligendi ex nisi iste quia adipisci quisquam ipsa accusantium ipsum. Officiis impedit amet maxime magnam ducimus ratione ipsam veniam?</p>
+
+            </div>
+            <div id="primetime2">
+                <img src="https://pbs.twimg.com/media/GCQJI0qbgAIjDFv?format=jpg&name=large" height="250px" width="200px" style="margin-left: 10px; margin-top: 10px;" alt="" srcset="">
+                <h3 style="text-align: center; color: white;">GUNTUR KARAM</h3>
+                <p style="text-align:justify; margin-left: 5px; margin-right: 5px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, hic architecto nihil repellat doloribus ipsa laboriosam eligendi qui! Magni quaerat deserunt exercitationem vero, officiis hic.</p>
+
+                
+            </div>
+            
+        </div>
+        <div class="whatsnew" onclick="whatsnewbutton()">
+            <h1 style="text-align: center; color: white; background:  #2a0344;">whats new ?</h1>
+            <div id="whatsnew1" >
+                <h3 style="text-align: center; color: white;">USTAD BHAGATH SINGH</h3>
+                <p style="float: left; height: 100px; width: 200px; text-align: justify;margin-left: 5px; margin-top: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique illum sequi quasi earum sapiente, molestias, minima maiores maxime ea veritatis quo dolores. Iure, voluptatem delectus!</p>
+                <img src="https://upload.wikimedia.org/wikipedia/en/d/d3/Ustaad_Bhagat_Singh_Poster.jpg" height="150px" width="150px" style="float: right; margin-right: 5px; margin-top: 10px;" alt="" srcset="">
+
+            </div>
+            <div id="whatsnew2">
+                
+                <h3 style="text-align: center; color: white;">PUSHPA</h3>
+                <p style="float: left; height: 100px; width: 200px; text-align: justify;margin-left: 5px; margin-top: 10px;"">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique illum sequi quasi earum sapiente, molestias, minima maiores maxime ea veritatis quo dolores. Iure, voluptatem delectus!</p>
+                <img src="https://cdn.gulte.com/wp-content/uploads/2021/12/Review1.jpg" height="150px" width="150px" style="float: right; margin-right: 5px; margin-top: 10px;" alt="" srcset="">
+ 
+
+            </div>
+        </div>
+        <div class="megaserials">
+            <h1 style="text-align: center; color: white; background:  #2a0344;">MEGA SERIALS</h1>
+            <div id="megaserials1" style="margin-top: 10px;">
+                <img src="https://i.pinimg.com/originals/d0/16/31/d0163192f486c344981bdf60d38e3bd0.jpg" height="250px" width="200px" style="margin-left: 15px; margin-top: 10px;" alt="" srcset="">
+                <h2 style="text-align: center;color: white;">RRR</h2>
+                <p style="text-align: justify;margin-left: 5px;margin-right: 5px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, commodi? Numquam officiis necessitatibus, enim ullam adipisci corrupti. Voluptatibus quae fugiat necessitatibus, eveniet culpa dolorem commodi maxime, illum quas minus dicta corporis repudiandae vitae</p>
+
+            </div>
+            <div id="megaserials2">
+                <img src="https://i.pinimg.com/originals/75/2d/29/752d29e9d9cb839a8fc8fb5acd064bad.jpg" height="250px" width="200px" style="margin-left: 10px; margin-top: 10px;" alt="" srcset="">
+                <h2 style="text-align: center;color: white;">HANUMAN</h2>
+                <p style="text-align: justify;margin-left: 5px;margin-right: 5px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, commodi? Numquam officiis necessitatibus, enim ullam adipisci corrupti. Voluptatibus quae fugiat necessitatibus, eveniet culpa dolorem commodi maxime, illum quas minus dicta corporis repudiandae vitae</p>
+
+                
+            </div>
+            <div id="megaserials3">
+                <img src="data:image/jpeg;base64,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" height="250px" width="200px" style="margin-left: 10px; margin-top: 10px;" alt="" srcset="">
+                <h2 style="text-align: center;color: white;">WALTAIR VEERIAH</h2>
+                <p style="text-align: justify;margin-left: 5px;margin-right: 5px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, commodi? Numquam officiis necessitatibus, enim ullam adipisci corrupti. Voluptatibus quae fugiat necessitatibus, eveniet culpa dolorem commodi maxime, illum quas minus dicta corporis repudiandae vitae</p>
+
+                
+            </div>
+
+        </div>
+        <div class="topshows">
+            <h1 style="text-align: center; color: white; background:  #2a0344;">TOP SHOWS</h1>
+            <div id="topshows1">
+                <h3 style="text-align: center;color: white;">ACHARYA</h3>
+                <p style="float: left; height: 100px; width: 200px; text-align: justify;margin-left: 5px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, enim. Rem maxime nisi aspernatur tenetur et. Aliquid nam ducimus aperiam alias, architecto dolores quas ipsum explicabo magni sequi inventore numquam fugiat obcaecati ab quidem modi.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShIaAUUqUJg2RxIRcO22S2HJa2yAsmJ04New&s" height="150px" width="150px" style="float: right; margin-right: 5px; margin-top: 10px;" alt="" srcset="">
+
+                
+
+            </div>
+            <div id="topshows2">
+                <h3 style="text-align: center;color: white;">MAD</h3>
+                <p style="float: left; height: 100px; width: 200px; text-align: justify;margin-left: 5px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, enim. Rem maxime nisi aspernatur tenetur et. Aliquid nam ducimus aperiam alias, architecto dolores quas ipsum explicabo magni sequi inventore numquam fugiat obcaecati ab quidem modi.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwbhpdBnuQjB4sBuBMq8u3Ao-LKKOHOflKvA&s" height="150px" width="150px" style="float: right; margin-right: 5px;margin-top: 10px;" alt="" srcset="">
+
+
+            </div>
+            <div id="topshows3">
+                <h3 style="text-align: center;color: white;">BHAGAVANTH KESDARI</h3>
+                <p style="float: left; height: 100px; width: 200px; text-align: justify;margin-left: 5px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, enim. Rem maxime nisi aspernatur tenetur et. Aliquid nam ducimus aperiam alias, architecto dolores quas ipsum explicabo magni sequi inventore numquam fugiat obcaecati ab quidem modi.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQBU2iTVXpnT7i7PRFlfEuLoUZgAgu7l3GDjpLolIl4A&s" height="150px" width="150px" style="float: right; margin-right: 5px;margin-top: 10px;" alt="" srcset="">
+
+
+            </div>
+            <div id="topshows4">
+                <h3 style="text-align: center;color: white;">ALA VIKUNTAPURAM</h3>
+                <p style="float: left; height: 100px; width: 200px; text-align: justify;margin-left: 5px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, enim. Rem maxime nisi aspernatur tenetur et. Aliquid nam ducimus aperiam alias, architecto dolores quas ipsum explicabo magni sequi inventore numquam fugiat obcaecati ab quidem modi.</p>
+                <img src="https://sund-images.sunnxt.com/127026/640x360_AlaVaikunthapurramloo_127026_3d3abcb5-b898-4ec5-a301-483c67f578e3.jpg" height="150px" width="150px" style="float: right; margin-right: 5px;margin-top: 10px;" alt="" srcset="">
+
+
+            </div>
+            
+        </div>
+        <div class="othershows">
+            <h1 style="text-align: center; color: white; background:  #2a0344;">OTHER SHOWS</h1>
+            <div id="othershows1">
+                <img src="https://m.media-amazon.com/images/M/MV5BNjNhN2UxMzItZDc1ZC00MDUwLTk4YzItMDlkZGZmNGYyZmVmXkEyXkFqcGdeQXVyMTUwMDg3OTQy._V1_FMjpg_UX1000_.jpg" height="200px" width="200px" style="margin-left: 15px; margin-top: 10px;" alt="" srcset="">
+                <h2 style="text-align: center;color: white;">SARKARUVARI PATA</h2>
+                <p style="margin-left: 5px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus culpa nesciunt temporibus rerum porro neque, magnam quae natus quas iste dolorum aliquam praesentium fuga quasi!</p>
+
+
+            </div>
+            <div id="othershows2">
+                <img src="https://m.media-amazon.com/images/M/MV5BMzQ4MmIwYTEtMjJhOC00YWY5LWJlYmItZDhiZGQ0MzhkZjM0XkEyXkFqcGdeQXVyNDc2NzU1MTA@._V1_.jpg" height="200px" width="200px" style="margin-left: 15px;margin-top: 10px;" alt="" srcset="">
+                <h2 style="text-align: center;color: white;">AKANDA</h2>
+                <p style="margin-left: 5px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus culpa nesciunt temporibus rerum porro neque, magnam quae natus quas iste dolorum aliquam praesentium fuga quasi!</p>
+
+
+            </div>
+            <div id="othershows3">
+                <img src="https://static.moviecrow.com/movies/4433-18-pages/192825-192822-18_Pages-px214.jpg" height="200px" width="200px" style="margin-left: 15px; margin-top: 10px;" alt="" srcset="">
+                <h2 style="text-align: center;color: white;">18 PAGES</h2>
+                <p style="margin-left: 5px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus culpa nesciunt temporibus rerum porro neque, magnam quae natus quas iste dolorum aliquam praesentium fuga quasi!</p>
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <footer>
+        <h4 style="color: white;">COPYRIGHT © 2024 MOVIE RULZ. ALL RIGHTS RESERVED</h4>
+    </footer>
+    </div>
+    <div id="tvshedules">
+        <h1 style="text-align: center; background: orangered;">UPCOMING MOVIES</h1>
+        <table style="margin: 0 auto;">
+            <thead>
+            <tr>
+                <th>S.NO</th>
+                <th>MOVIE NAME</th>
+                <th>RELESE DATE</th>
+                
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td><td>PUSPHA</td><td>23 JAN</td>
+            </tr>
+            <tr>
+                <td>2</td><td>RRR</td><td>4 FEB</td>
+            </tr>
+            <tr>
+                <td>3</td><td>AKANDA</td><td>6 MAR</td>
+            </tr>
+            <tr>
+                <td>4</td><td>LEGEND</td><td>5 APR</td>
+            </tr>
+            <tr>
+                <td>5</td><td>IRONMAN</td><td>8 MAY</td>
+            </tr>
+            <tr>
+                <td>6</td><td>THOR</td><td>5 JUN</td>
+            </tr>
+            <tr>
+                <td>7</td><td>HULK</td><td>23 JUL</td>
+            </tr>
+            <tr>
+                <td>8</td><td>ROCK</td><td>5 AUG</td>
+            </tr>
+            <tr>
+                <td>9</td><td>ANTMAN</td><td>23 SEP</td>
+            </tr>
+            <tr>
+                <td>10</td><td>LOKI</td><td>10 OCT</td>
+            </tr>
+            <tr>
+                <td>11</td><td>AQUA MAN</td><td>2 NOV</td>
+            </tr>
+            <tr>
+                <td>12</td><td>KRISH</td><td>5 DEC</td>
+            </tr>
+        
+            </tbody>
+        </table>
+        </div>
+
+        <div id="primetime">
+            <h1 style="text-align: center; background: orangered;">prime time</h1>
+            <h1 style="text-align: center"><mark>TOLLYWOOD MOVIE HEROS</mark></h1>
+<div style="background: gold">
+    <h3>tarak</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque aut beatae blanditiis cumque debitis dicta dolores enim exercitationem id in incidunt laboriosam maiores molestias necessitatibus, nostrum, omnis pariatur quaerat quam qui quo quos, recusandae unde ut velit vero voluptates. Beatae culpa cupiditate, dolorem earum fuga harum libero, porro praesentium quas qui sit, sunt totam voluptatem! Accusamus, adipisci aliquam amet cumque dolorem illum ipsa iste, itaque libero minus modi necessitatibus neque odit provident quod, reiciendis sed veritatis voluptatem? A asperiores cumque dignissimos doloremque dolorum, eius ex explicabo facilis harum ipsa qui quibusdam quos ratione saepe sapiente similique sint sunt, ullam voluptate voluptatem. Cumque doloremque expedita magni molestiae qui reprehenderit sit suscipit? Adipisci eligendi fugit hic itaque laudantium libero, magni, molestiae, molestias odit praesentium ratione rem reprehenderit temporibus veritatis vitae? Aut delectus officiis porro praesentium quis reiciendis sapiente sit, voluptas? Adipisci, autem blanditiis, dignissimos dolorem doloremque earum eligendi esse facere harum minima necessitatibus nisi obcaecati officiis quam quis saepe voluptate! Accusamus autem, beatae deleniti eius eveniet, ex laborum nesciunt nobis quis repellat saepe totam, voluptatibus? Accusamus ad architecto blanditiis cum doloremque eum eveniet facere, facilis illum in labore nemo nesciunt, optio praesentium quasi, quibusdam soluta! Beatae est eum ex nam quia.</p>
+    </div>
+<div style="background: coral">
+    <h3>mahesh</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque aut beatae blanditiis cumque debitis dicta dolores enim exercitationem id in incidunt laboriosam maiores molestias necessitatibus, nostrum, omnis pariatur quaerat quam qui quo quos, recusandae unde ut velit vero voluptates. Beatae culpa cupiditate, dolorem earum fuga harum libero, porro praesentium quas qui sit, sunt totam voluptatem! Accusamus, adipisci aliquam amet cumque dolorem illum ipsa iste, itaque libero minus modi necessitatibus neque odit provident quod, reiciendis sed veritatis voluptatem? A asperiores cumque dignissimos doloremque dolorum, eius ex explicabo facilis harum ipsa qui quibusdam quos ratione saepe sapiente similique sint sunt, ullam voluptate voluptatem. Cumque doloremque expedita magni molestiae qui reprehenderit sit suscipit? Adipisci eligendi fugit hic itaque laudantium libero, magni, molestiae, molestias odit praesentium ratione rem reprehenderit temporibus veritatis vitae? Aut delectus officiis porro praesentium quis reiciendis sapiente sit, voluptas? Adipisci, autem blanditiis, dignissimos dolorem doloremque earum eligendi esse facere harum minima necessitatibus nisi obcaecati officiis quam quis saepe voluptate! Accusamus autem, beatae deleniti eius eveniet, ex laborum nesciunt nobis quis repellat saepe totam, voluptatibus? Accusamus ad architecto blanditiis cum doloremque eum eveniet facere, facilis illum in labore nemo nesciunt, optio praesentium quasi, quibusdam soluta! Beatae est eum ex nam quia.</p>
+</div>
+<div style="background: lime">
+    <h3>alluarjun</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque aut beatae blanditiis cumque debitis dicta dolores enim exercitationem id in incidunt laboriosam maiores molestias necessitatibus, nostrum, omnis pariatur quaerat quam qui quo quos, recusandae unde ut velit vero voluptates. Beatae culpa cupiditate, dolorem earum fuga harum libero, porro praesentium quas qui sit, sunt totam voluptatem! Accusamus, adipisci aliquam amet cumque dolorem illum ipsa iste, itaque libero minus modi necessitatibus neque odit provident quod, reiciendis sed veritatis voluptatem? A asperiores cumque dignissimos doloremque dolorum, eius ex explicabo facilis harum ipsa qui quibusdam quos ratione saepe sapiente similique sint sunt, ullam voluptate voluptatem. Cumque doloremque expedita magni molestiae qui reprehenderit sit suscipit? Adipisci eligendi fugit hic itaque laudantium libero, magni, molestiae, molestias odit praesentium ratione rem reprehenderit temporibus veritatis vitae? Aut delectus officiis porro praesentium quis reiciendis sapiente sit, voluptas? Adipisci, autem blanditiis, dignissimos dolorem doloremque earum eligendi esse facere harum minima necessitatibus nisi obcaecati officiis quam quis saepe voluptate! Accusamus autem, beatae deleniti eius eveniet, ex laborum nesciunt nobis quis repellat saepe totam, voluptatibus? Accusamus ad architecto blanditiis cum doloremque eum eveniet facere, facilis illum in labore nemo nesciunt, optio praesentium quasi, quibusdam soluta! Beatae est eum ex nam quia.</p>
+</div>
+<div style="background: deeppink">
+    <h3>prabhas</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque aut beatae blanditiis cumque debitis dicta dolores enim exercitationem id in incidunt laboriosam maiores molestias necessitatibus, nostrum, omnis pariatur quaerat quam qui quo quos, recusandae unde ut velit vero voluptates. Beatae culpa cupiditate, dolorem earum fuga harum libero, porro praesentium quas qui sit, sunt totam voluptatem! Accusamus, adipisci aliquam amet cumque dolorem illum ipsa iste, itaque libero minus modi necessitatibus neque odit provident quod, reiciendis sed veritatis voluptatem? A asperiores cumque dignissimos doloremque dolorum, eius ex explicabo facilis harum ipsa qui quibusdam quos ratione saepe sapiente similique sint sunt, ullam voluptate voluptatem. Cumque doloremque expedita magni molestiae qui reprehenderit sit suscipit? Adipisci eligendi fugit hic itaque laudantium libero, magni, molestiae, molestias odit praesentium ratione rem reprehenderit temporibus veritatis vitae? Aut delectus officiis porro praesentium quis reiciendis sapiente sit, voluptas? Adipisci, autem blanditiis, dignissimos dolorem doloremque earum eligendi esse facere harum minima necessitatibus nisi obcaecati officiis quam quis saepe voluptate! Accusamus autem, beatae deleniti eius eveniet, ex laborum nesciunt nobis quis repellat saepe totam, voluptatibus? Accusamus ad architecto blanditiis cum doloremque eum eveniet facere, facilis illum in labore nemo nesciunt, optio praesentium quasi, quibusdam soluta! Beatae est eum ex nam quia.</p>
+</div>
+  </div>
+  <div id="whatsnew">
+    <h1 style="text-align: center; background: orangered;">whatsnew</h1>!important;
+    <h1>COSTLY  PLAYERS  OF  IPL</h1>
+<div style="background-color: white;">
+    <h3> MITCHELL STARC</h3>
+    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320/lsci/db/PICTURES/CMS/316600/316644.png" width="250px" height="250px" alt=" image not found">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis delectus eaque eligendi ipsum
+        oenim facere.modi neque nobis non, numquam officia pariatur praesentium quia quisquam recusandae soluta suscipit totam ullam veniam veritatis voluptatibus voluptatum! Aliquam amet delectus, distinctio dolorem doloremque, eaque e<span id="dots">.........</span>
+         arum est fuga fugit necessitatibus nesciunt non praesentium quam quas, repellendus soluta tenetur unde vel! Ad architecto at aut blanditiis cupiditate, debitis dicta distinctio dolorem dolores doloribus eligendi excepturi expedita harum hic illum labore non numquam placeat porro quam repellat saepe similique tempora unde ut veniam veritatis, voluptatum? Accusantium aperiam cum deleniti dicta dignissimos dolor dolore eligendi eveniet explicabo impedit, magnam necessitatibus nihil perspiciatis porro provident quaerat quibusdam quos ratione recusandae similique suscipit temporibus ut. Blanditiis hic laborum nulla qui reprehenderit tempora voluptatem. Atque ipsum iste magni minus optio possimus quidem quis totam vero voluptate. Cupiditate, deserunt doloribus, eveniet, ex hic iste itaque laudantium maxime minima modi natus numquam</span>.</p>
+    
+
+</div>
+<div style="background-color: white;">
+    <h3> PATCUMMINS</h3>
+    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320/lsci/db/PICTURES/CMS/316600/316692.png" width="250px" height="250px" alt=" image not found">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis delectus eaque eligendi ipsum
+        oenim facere.modi neque nobis non, numquam officia pariatur praesentium quia quisquam recusandae soluta suscipit totam ullam veniam veritatis voluptatibus voluptatum! Aliquam amet delectus, distinctio dolorem doloremque, eaque e<span id="dots2">.........</span>
+         arum est fuga fugit necessitatibus nesciunt non praesentium quam quas, repellendus soluta tenetur unde vel! Ad architecto at aut blanditiis cupiditate, debitis dicta distinctio dolorem dolores doloribus eligendi excepturi expedita harum hic illum labore non numquam placeat porro quam repellat saepe similique tempora unde ut veniam veritatis, voluptatum? Accusantium aperiam cum deleniti dicta dignissimos dolor dolore eligendi eveniet explicabo impedit, magnam necessitatibus nihil perspiciatis porro provident quaerat quibusdam quos ratione recusandae similique suscipit temporibus ut. Blanditiis hic laborum nulla qui reprehenderit tempora voluptatem. Atque ipsum iste magni minus optio possimus quidem quis totam vero voluptate. Cupiditate, deserunt doloribus, eveniet, ex hic iste itaque laudantium maxime minima modi natus numquam</span>.</p>
+    
+
+</div>
+
+
+
+  </div>
+
+   
+    <script src="projectk.js"></script>
+   
+        
+    
+</body>
+</html>

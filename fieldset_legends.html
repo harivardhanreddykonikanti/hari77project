@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FIELDSET AND LEGENDS</title>
+    <style>
+        body{
+            font-family: Calibri,sans-serif;
+            font-size: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+        label{
+            font: bolder;
+        }
+        fieldset{
+            box-shadow: 0 0 10px blueviolet;
+            margin: 10px;
+            width: 60px;
+            float: right;
+        }
+        legend{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<h1>TESTING FILEDSET AND LEGENDS</h1>
+<form>
+    <fieldset>
+        <legend>PERSONAL INFORMATION</legend>
+        <label for="username">USERNAME</label>
+        <input type="text" id="username" placeholder="ENTER YOUR NAME">
+        <label for="password">PASSWORD</label>
+        <input type="password" id="password" placeholder="only numbers">
+    </fieldset>
+    <fieldset>
+        <legend>EDUCATION DETAILS</legend>
+        <label for="college">COLLEGE DETAILS</label>
+        <input type="text" id="college" placeholder="ENTER YOUR COLLEGE NAME">
+        <label for="college percent">ENTER COLLEGE PERCENTAGE</label>
+        <input type="number" id="college percent" placeholder="percentage round up">%
+    </fieldset>
+</form>
+</body>
+</html>

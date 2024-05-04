@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>postions_homework</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Calibri, sans-serif;
+        }
+        #menubar{
+            background-color: rgb(128, 53, 136);
+            height: 80px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5%;
+        }
+        #menubar ul{
+            list-style: none;
+            display: flex;
+        }
+        #menubar ul li{
+            padding: 10px 30px;
+            position: relative;
+        }
+        #menubar ul li a{
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+        #dropdown{
+          display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+        }
+        #dropdown ul{
+            display: block;
+            background-color: rgb(128, 53, 136);
+        }
+        #dropdown ul li{
+            width: 150px;
+            padding: 10px;
+        }
+        #dropdown{
+            display: none;
+        }
+        #menubar ul li a:hover{
+            background-color: rgb(90, 38, 136);
+            padding: 2px;
+            font-weight: bold;
+            color: black;
+        }
+        #menubar ul li:hover #dropdown {
+            display: block;
+        }
+        #quant h2{
+            background-color: rgb(220, 60, 35);
+            padding: 10px;
+            text-align: center;
+
+
+        }
+        #quant img{
+            border: 2px solid black;
+            margin-left: 300px;
+            margin-top: 20px;
+        }
+        #quant h3{
+            text-align: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .q1{
+            height: 100px;
+            width: 1000px;
+            border: 2px solid crimson ;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+        }
+        .q1 h4{
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        .q1 input{
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+        #nsqunat{
+            margin-left: 1200px;
+            padding: 10px;
+        }
+        #quant{
+            display:none;
+        }
+        #reason h2{
+            background-color: rgb(220, 60, 35);
+            padding: 10px;
+            text-align: center;
+        }
+        #reason img{
+            border: 2px solid black;
+            margin-left: 300px;
+            margin-top: 20px;
+        }
+        #reason h3{
+            text-align: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .q1{
+            height: 100px;
+            width: 1000px;
+            border: 2px solid crimson ;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+        }
+        .q1 h4{
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        .q1 input{
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+        #nsreason{
+            float: right;
+            padding: 10px;
+
+
+        }
+        #quant{
+            display:none;
+        }
+        #psreason{
+            padding: 10px;
+            float: left;
+        }
+        #reason{
+            display: none;
+        }
+        #english h2{
+            background-color: rgb(220, 60, 35);
+            padding: 10px;
+            text-align: center;
+        }
+
+        #english h3{
+            text-align: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .q1{
+            height: 100px;
+            width: 1000px;
+            border: 2px solid crimson ;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+        }
+        .q1 h4{
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        .q1 input{
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+        #english p{
+            text-align: justify;
+            margin-top: 10px;
+        }
+        #nsenglish{
+            float: right;
+            padding: 10px;
+
+
+        }
+        #psenglish{
+            padding: 10px;
+            float: left;
+        }
+        #english{
+            display: none;
+        }
+        #gk h2{
+            background-color: rgb(220, 60, 35);
+            padding: 10px;
+            text-align: center;
+        }
+
+        #gk h3{
+            text-align: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .q1{
+            height: 100px;
+            width: 1000px;
+            border: 2px solid crimson ;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+        }
+        .q1 h4{
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        .q1 input{
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+
+        #nsgk{
+            float: right;
+            padding: 10px;
+            margin-right: 60px;
+
+
+        }
+        #psgk{
+            padding: 10px;
+            float: left;
+        }
+        #gk{
+            display: none;
+        }
+        nav{
+            position: sticky;
+            top: 0px;
+        }
+        #caution{
+
+            width: 200px;
+            height: 100px;
+            position: fixed;
+            margin-left: 1200px;
+            margin-top: 300px;
+
+        }
+        #caution img{
+            position: absolute;
+            float: left;
+            position: sticky;
+
+
+        }
+        #caution p{
+            position: absolute;
+            margin-left: 80px;
+            margin-top: 17px;
+
+        }
+        #menubar img{
+            border-radius: 50%;
+        }
+        button:hover{
+            background-color: rgb(86, 0, 145);
+            color: whitesmoke;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div id="menubar">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKChoHCo3mvTndEiOph2e3tNrJruai-0Bg4wnJsrd-ug&s" height="80px"  width="150px" alt="">
+    <ul>
+        <li onclick="quant()" id="quantbutton"> <a href="#">QUANTITATIVE APPTITUDE</a></li>
+        <li onclick="reasoning()" id="reasonbutton"> <a href="#">REASONING</a></li>
+        <li onclick="english()" id="englishbutton"> <a href="#">ENGLISH</a></li>
+       <li onclick="gk()" id="gkbutton"> <a href="#">GENRAL KNOWLEDGE</a>
+           <div id="dropdown">
+        <ul>
+            <li> <a href="#">CURRENT AFFAIRS</a></li>
+            <li> <a href="#">STATIC GK</a></li>
+            <li> <a href="#">POLITY</a></li>
+            <li> <a href="#">HISTORY</a></li>
+
+        </ul>
+           </div>
+       </li>
+        <li> <a href="#">LOGOUT</a></li>
+    </ul>
+
+</div>
+<div id="caution">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIvp9b2_egzVawKdurbY8_Uwv2xT-pL_qFp7YeuhM-W7wTMK8kI2ILxjnXpOpCmrrOSs8&usqp=CAU"height="75px" width="75px" alt="">
+    <p>REPORT QUESTION</p>
+</div>
+<div id="quant">
+    <nav><H2>QUANTATIVE APPTITUDE</H2></nav>
+    <h3>answer the following data interpetation carefuuly</h3>
+    <img src="https://storage.googleapis.com/tb-img/production/22/03/F1_Aditya_Shraddha_28.01.2021_G%205.PNG " height="400px" width="600px" alt="">
+
+    <div class="q1">
+        <h4>how are there ar eassiohntertr fdsthi intdsnfdngfdgndgnfdgdf?</h4>
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+    </div>
+    <div class="q1">
+        <h4>how are there ar eassiohntertr fdsthi intdsnfdngfdgndgnfdgdf?</h4>
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+    </div>
+    <div class="q1">
+        <h4>how are there ar eassiohntertr fdsthi intdsnfdngfdgndgnfdgdf?</h4>
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+    </div>
+    <button  onclick="reasoning()" id="nsqunat">NEXT SECTION</button>
+
+</div>
+<div id="reason">
+   <nav><H2>REASONING</H2></nav>
+    <h3>answer the following data interpetation carefuuly</h3>
+    <img src="https://blogmedia.testbook.com/blog/wp-content/uploads/2015/05/1.6.png " height="400px" width="600px" alt="">
+
+    <div class="q1">
+        <h4>how are there ar eassiohntertr fdsthi intdsnfdngfdgndgnfdgdf?</h4>
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+    </div>
+    <div class="q1">
+        <h4>how are there ar eassiohntertr fdsthi intdsnfdngfdgndgnfdgdf?</h4>
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+    </div>
+    <div class="q1">
+        <h4>how are there ar eassiohntertr fdsthi intdsnfdngfdgndgnfdgdf?</h4>
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+    </div>
+    <button onclick="english()" id="nsreason">NEXT SECTION</button>
+    <button onclick="quant()" id="psreason">PREVIOUS SECTION</button>
+
+</div>
+<div id="english">
+    <nav><H2>ENGLISH</H2></nav>
+    <h3>answer the following data interpetation carefuuly</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet corporis debitis delectus dolorum odit pariatur sapiente veritatis vitae voluptates. Animi dolore iste maiores obcaecati! Aliquid, corporis earum exercitationem illum nulla omnis perspiciatis? Commodi consectetur consequatur culpa, dolore eligendi exercitationem explicabo facilis labore nesciunt nulla, omnis perspiciatis praesentium provident quaerat sed sequi sunt totam voluptatem. Adipisci amet asperiores atque, blanditiis consequatur debitis eaque est magnam nesciunt nostrum odio perferendis perspiciatis quos, repellat repellendus soluta tempora, tempore temporibus totam unde ut voluptate voluptates? Aut commodi cumque earum enim, error fugiat maiores nostrum omnis perferendis provident rem sapiente! Architecto, dolorum explicabo impedit laborum officia perferendis possimus quos! Eveniet hic, temporibus. Accusamus aliquam amet at blanditiis deserunt doloremque dolorum facere facilis iure laboriosam laborum modi nemo nulla numquam odit officiis pariatur repudiandae sed sequi, sunt, temporibus vel veniam voluptates. Atque commodi dolorem excepturi harum iure nostrum qui! A adipisci aspernatur deserunt dolores facere modi, necessitatibus nesciunt nihil, obcaecati perspiciatis placeat quae quisquam reiciendis repellat repellendus reprehenderit temporibus voluptates! Aspernatur at et facere illo libero molestias necessitatibus neque quidem totam veritatis! Adipisci amet aspernatur dolorum expedita facere minima minus nulla quasi quisquam unde! Architecto assumenda blanditiis cum deleniti deserunt fugit impedit ipsam iste laudantium nam non, perspiciatis quae quaerat quidem repellendus sapiente temporibus vel veniam veritatis voluptatem. Ab assumenda at atque consectetur consequuntur corporis debitis doloribus ea eaque eligendi ex excepturi facere facilis fugit impedit in ipsa ipsum itaque mollitia non nostrum odit perferendis perspiciatis porro quaerat quasi quidem quis quo quos reprehenderit sit soluta sunt tempora, totam ullam, veritatis voluptates! Ad amet atque distinctio dolores explicabo facere hic id impedit, inventore, ipsa iste mollitia quod recusandae voluptate voluptatem. Aliquid aspernatur cum dolor dolore est et ipsa iusto libero molestiae nihil quam, reiciendis sint suscipit ut veritatis! Assumenda cupiditate debitis deleniti doloremque dolorum earum, error illum ipsa ipsam laudantium numquam odit, omnis possimus quasi quo ratione rem veritatis voluptas? Corporis cumque et sit tempora veniam. Aperiam consectetur debitis deserunt dolorum error ex ipsa labore laboriosam magni modi nobis nulla placeat, praesentium quae quaerat repellat reprehenderit rerum similique sunt suscipit. Doloremque enim explicabo facere fugiat nostrum numquam repudiandae, tenetur. Accusantium amet doloribus dolorum error excepturi illo ipsa ipsam maxime nostrum porro possimus quae qui, reiciendis sed sunt suscipit ullam voluptates voluptatum? Aliquam atque beatae blanditiis dolor ea facere illo ipsa, iure, minima minus optio quos sequi temporibus vero voluptate. Consectetur, dolores ex fuga in iste iure, laudantium neque odio perferendis quaerat quibusdam sit suscipit ut vitae voluptates. Aliquid asperiores assumenda at corporis cupiditate delectus deleniti doloremque earum est, facere facilis fuga impedit laborum nisi nostrum numquam pariatur placeat quae quibusdam repellat sapiente similique sint sunt, velit veniam vitae voluptate voluptates. Animi doloremque ducimus est explicabo fugit iusto non quis repellat veniam. Accusantium autem, consequatur corporis dolore dolorum ducimus eaque error facere ipsa ipsum iste itaque laudantium minima minus modi necessitatibus nesciunt nulla officia omnis perferendis provident repellat rerum sed sint suscipit ut voluptatibus. Ad aperiam architecto debitis excepturi exercitationem ipsa, laudantium molestias nostrum optio qui ratione sequi similique suscipit tempora veritatis? Ab eligendi et facere magni nostrum odio quo tempora voluptatem. Cumque cupiditate delectus expedita explicabo! Ipsam molestias omnis quia? Dolore incidunt labore natus praesentium vel. Doloribus iure, nemo nisi pariatur repellendus repudiandae similique tenetur. At debitis, delectus distinctio, dolores eaque fuga harum impedit natus quam quas quidem ratione sint sunt vel veritatis? Delectus dolores dolorum, eaque fugit nisi quod? Ab ad alias asperiores atque commodi consectetur cumque debitis deserunt dignissimos, dolore dolorem doloremque, eaque eveniet explicabo fuga fugit id incidunt ipsum libero maiores minima modi non officiis pariatur perferendis provident quisquam rem sed sunt, tempora tempore ut voluptate voluptatem? Ab, ad asperiores assumenda corporis ea esse expedita facilis inventore libero molestiae molestias mollitia nam obcaecati omnis pariatur perferendis quod reiciendis repellendus rerum tempora velit veniam veritatis! Beatae commodi corporis culpa cumque dolorem dolorum error et, eveniet fuga labore perferendis quod veritatis! Atque inventore necessitatibus numquam tempora voluptas voluptate? Adipisci aut est fuga id laboriosam magni molestias nemo optio perspiciatis? A ad adipisci architecto assumenda dicta dolorem dolorum eaque esse exercitationem facere facilis fugit harum impedit ipsa ipsam iusto laboriosam laudantium magnam minus modi molestias natus nesciunt nobis odio odit provident quasi quidem, quisquam quos reiciendis repudiandae sapiente soluta temporibus ullam ut velit vitae! Earum modi qui quidem saepe! Accusamus blanditiis culpa cupiditate dolor doloribus explicabo illum, in ipsa ipsam iure laboriosam magnam maxime natus non odio porro, quo quod reiciendis repellat similique suscipit, totam voluptas? Aliquid, amet at atque blanditiis consequuntur debitis earum eos et eveniet excepturi facilis fugit id impedit ipsam laborum magni obcaecati pariatur provident, quaerat reiciendis rerum sequi sit vel velit voluptate. Architecto cupiditate error et mollitia nostrum odio sunt suscipit! Enim id incidunt minima natus obcaecati perspiciatis, quaerat. Deleniti dignissimos et facere in maiores modi, molestiae voluptatem. Animi asperiores at, atque consectetur consequuntur cumque deserunt dignissimos dolores et facere id inventore laborum maxime modi molestias, nostrum perferendis praesentium quae qui quia quod repudiandae sed, soluta velit voluptate. A doloribus incidunt modi possimus quidem sapiente ut voluptatem. Ab, adipisci at debitis dignissimos ea ex exercitationem, hic incidunt magnam magni molestiae, nisi odio optio perferendis quam quibusdam similique vero voluptate. Corporis facere nam ut voluptatem. Animi asperiores assumenda debitis dolore ducimus eum fugiat hic ipsa, iste necessitatibus nostrum, numquam pariatur qui quibusdam saepe sapiente tenetur veritatis vero? Deleniti error esse, mollitia odio omnis quibusdam repellat ullam voluptatem? Ab accusamus aut corporis cumque dignissimos earum ipsa nesciunt numquam officiis perferendis perspiciatis quaerat, qui quia quisquam rerum tenetur vero! Accusantium ad dignissimos, dolor ducimus facere inventore nemo praesentium quod saepe, similique, sunt voluptatibus voluptatum? Ad animi architecto asperiores atque culpa cum, cumque cupiditate dicta dignissimos dolore doloremque doloribus error expedita id illum in incidunt laborum libero magni, minus modi natus necessitatibus nihil numquam obcaecati officia possimus quaerat qui quia quisquam quo quod recusandae repudiandae sit veniam veritatis, voluptatum? Aliquid at culpa distinctio dolore, dolores expedita incidunt laboriosam libero maxime molestiae placeat, provident repellat tempore ut veritatis! Aperiam architecto ducimus magnam modi qui rerum saepe?</p>
+
+    <div class="q1">
+        <h4>how are there ar eassiohntertr fdsthi intdsnfdngfdgndgnfdgdf?</h4>
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+    </div>
+    <div class="q1">
+        <h4>how are there ar eassiohntertr fdsthi intdsnfdngfdgndgnfdgdf?</h4>
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+    </div>
+    <div class="q1">
+        <h4>how are there ar eassiohntertr fdsthi intdsnfdngfdgndgnfdgdf?</h4>
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+    </div>
+    <button onclick="gk()" id="nsenglish">NEXT SECTION</button>
+    <button onclick="reasoning()" id="psenglish">PREVIOUS SECTION</button>
+
+</div>
+<div id="gk">
+    <nav><H2>GENRAL KNOWLEDGE</H2></nav>
+    <h3>answer the following data interpetation carefuuly</h3>
+    <div class="q1">
+        <h4>how are there ar eassiohntertr fdsthi intdsnfdngfdgndgnfdgdf?</h4>
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+    </div>
+    <div class="q1">
+        <h4>how are there ar eassiohntertr fdsthi intdsnfdngfdgndgnfdgdf?</h4>
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+    </div>
+    <div class="q1">
+        <h4>how are there ar eassiohntertr fdsthi intdsnfdngfdgndgnfdgdf?</h4>
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+        <input type="radio" name="ramu">&nbsp;ramu
+    </div>
+    <button onclick="submit()" id="nsgk">SUBMIT</button>
+    <button onclick="english()" id="psgk">PREVIOUS SECTION</button>
+
+
+</div>
+<script src="postion.js"></script>
+
+</body>
+</html>

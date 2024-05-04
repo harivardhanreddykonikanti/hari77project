@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        height: 400px;
+        width: 400px;
+        position: relative;
+        top: 200px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border: 10px solid white;
+        border-radius: 8px;
+        box-shadow: 10px 25px 25px black;
+        overflow: hidden;
+    }
+    .img-container {
+        width: 100%;
+        display: flex;
+        animation:slide 16s infinite;
+    }
+    .img-container img{
+        width: 100%;
+    }
+    @keyframes slide{
+        0%{
+            transform: translateX(0);
+        }
+        25%{
+            transform: translateX(0);
+        }
+        30%{
+            transform: translateX(-100%);
+        }
+        50%{
+            transform: translateX(-100%);
+        }
+        55%{
+            transform: translateX(-200%);
+        }
+        75%{
+            transform: translateX(-200);
+        }
+        80%{
+            transform: translateX(-300);
+        }
+        100%{
+            transform: translateX(-300);
+        }
+        
+    }
+
+   
+</style>
+<body>
+    <div class="container">
+        <div class="img-container">
+            <img src="images/24-movie-add-56300.jpg"  alt="">
+            <img src="images/images.jpg" alt="">
+            <img src="images/Legend 1000 Days Poster_iqlik123iqlik7FF3AD-F06BD9.jpg"  alt="">
+            <img src="images/suprem.webp"  alt="">            
+
+        </div>
+    </div>
+    
+    
+</body>
+</html>

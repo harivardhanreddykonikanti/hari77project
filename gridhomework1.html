@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GRID HOME WORK 1</title>
+    <style>
+        h1{
+            text-align: center;
+            justify-content: center;
+        }
+        #container{
+            display: grid;
+            width: 1300px;
+            height: 580px;
+            border: 2px solid black;
+            grid-template-rows:repeat(8,1fr);
+            grid-template-columns:repeat(9,1fr);
+            row-gap: 10px;
+            column-gap: 10px;
+            margin: 0 auto;
+        }
+        #item1{
+            background: rgb(82, 167, 248);
+            grid-column-start: 1;
+            grid-column-end: 10;
+        }
+        #item4{
+            background: rgb(243, 144, 25);
+            grid-column-start: 2;
+            grid-column-end: 6;
+            grid-row-start: 5;
+            grid-row-end: 8;
+
+        }
+        #item3{
+            background-color: rgb(180, 106, 227);
+            grid-column-start: 7;
+            grid-column-end: 9;
+            grid-row-start: 2;
+            grid-row-end: 5;
+
+        }
+        #item2{
+            background: rgb(111, 192, 64);
+            grid-column-start: 2;
+            grid-column-end: 7;
+            grid-row-start: 2;
+            grid-row-end: 5;
+        }
+        #item5{
+            background: rgb(243, 144, 25);
+            grid-column-start: 6;
+            grid-column-end: 9;
+            grid-row-start: 5;
+            grid-row-end: 8;
+        }
+        #item6{
+            background: rgb(82, 167, 248);
+            grid-column-start: 1;
+            grid-column-end: 10;
+        }
+        #item1:hover{
+            background: #1c38ea;
+        }
+        #item2:hover{
+            background: #49f506;
+        }
+        #item3:hover{
+            background: #ea28ea;
+        }
+        #item4:hover{
+            background: #f6a206;
+        }
+        #item5:hover{
+            background: #f6a206;
+        }
+        #item6:hover{
+            background: #1c38ea;
+        }
+        #item2 h1{
+            margin-top: 80px;
+        }
+        #item3 h1{
+            margin-top: 80px;
+        }
+        #item4 h1{
+            margin-top: 80px;
+        }
+        #item5 h1{
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="item1"><h1>HEADER</h1></div>
+    <div id="item2"><h1>MAIN CONTENT</h1> </div>
+    <div id="item3"><h1>SIDEBAR</h1> </div>
+    <div id="item4"><h1>TWIN1</h1> </div>
+    <div id="item5"><h1>TWIN2</h1> </div>
+    <div id="item6"><h1>FOOTER</h1> </div>
+
+
+</div>
+
+</body>
+</html>

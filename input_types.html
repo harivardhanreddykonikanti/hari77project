@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input types</title>
+    <style>
+        body{
+            font-family: Calibri,sans-serif;
+            background-color: lightpink;
+        }
+        H1{
+            text-align: center;
+        }
+        form{
+            text-align: justify-all;
+            font-size: 20px;
+            margin: 10px;
+            display: inline-block;
+
+
+        }
+    </style>
+</head>
+<body>
+<h1>COLLEGE ADMISSION</h1>
+<form>
+    <label for="username"> USER NAME</label>
+    <input type="text" id="username" placeholder="your full name"><br>
+    <label for="password">YOUR PASSWORD</label>
+    <input type="password" id="password" placeholder="must have 8 letters"><br>
+    <label for="email">EMAIL ADDRESS</label>
+    <input type="email" id="email" placeholder="current email address"><br>
+    <label for="color">COLOR</label>
+    <input type="color" id="color" placeholder="color"><br>
+    <label for="date">DATE</label>
+    <input type="date" id="date"><br>
+    <labeL for="file">PLEASE UPLOAD YOUR RESUME</labeL>
+    <input type="file" id="file"><br>
+    <label for="month">MONTH OF JOINING</label>
+    <input type="month" id="month" placeholder="PLEASE SELECT MONTH"><BR>
+    <label for="checkbox">LANGUAGES KNOWN</label><BR>
+    <input type="checkbox" id="checkbox" value="english">ENGLISH
+    <INPUT type="checkbox" id="checkbox" value="telugu">TELUGU
+    <input type="checkbox" id="checkbox" value="hindi">HINDI<br>
+    <label for="radio">GENDER</label><br>
+    <input type="radio" id="radio" name="gender" value="male">MALE
+    <input type="radio" id="radio" name="gender" value="female">female<br>
+    <label for="range">DAILY INCOME</label>
+    100<input type="range" min="100" max="500">500<br>
+        <input type="submit" value="ENROLL">
+    <input type="reset" value="RESET">
+</form>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TABLES HOMEWORK</title>
+    <style>
+        body{
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            font-family: Calibri,sans-serif;
+
+ 
+        }
+        h1{
+            text-align: center;
+            background:linear-gradient(blue,rebeccapurple,cyan);
+            padding: 20px;
+            color: black;
+            margin-top: 0px;
+        }
+
+        table{
+            margin-top: 30px;
+            margin-left: 180px;
+            margin-bottom: 10px;
+            width: 75%;
+            border: 20px orange;
+            box-shadow: 0 0 10px orangered;
+            font-size: 25px;
+        }
+        td,th{
+            text-align: center;
+            padding: 30px;
+            margin: 5px 5px;
+            color: white;
+        }
+        th,td{
+            background-color:#756d6c;
+        }
+        placeholder{
+
+        }
+        button:hover{
+            font-size: 16px;
+            background-color: green;
+
+        }
+        #addreset:hover{
+            background-color: red;!important;
+        }
+        #subreset:hover{
+            background-color: red;!important;
+        }
+        #mulreset:hover{
+            background-color: red;!important;
+        }
+        #divreset:hover{
+            background-color: red;!important;
+        }
+        #resetall:hover{
+            background-color: red;!important;
+        }
+        input{
+            text-align: center;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+<h1>ARTHEMATIC OPERATIONS IN TABLES</h1>
+<table>
+    <tr>
+        <th>S.NO</th>
+        <th>INPUT1</th>
+        <th>INPUT2</th>
+        <th>RESULT</th>
+        <th><button id="resetall" onclick="resetall()" >RESET ALL</button></th>
+    </tr>
+    <tr>
+    <td>ADDITION</td>
+    <td><input  id="a1" PLACEHOLDER="NUMBER1"></td>
+    <td><input   id="a2" PLACEHOLDER="NUMBER2"></td>
+    <td><button id="add" onclick="result1()" >RESULT</button></td>
+        <td><button id="addreset" onclick="reset()" >RESET</button></td>
+
+    </tr>
+    <tr>
+        <td>SUBRATION</td>
+        <td><input  id="b1" PLACEHOLDER="NUMBER1"></td>
+        <td><input   id="b2" PLACEHOLDER="NUMBER2"></td>
+        <td><button id="sub" onclick="result2()" >RESULT</button></td>
+        <td><button id="subreset" onclick="reset2()" >RESET</button></td>
+    </tr>
+    <tr>
+        <td>MULTIPLICATION</td>
+        <td><input  id="c1" PLACEHOLDER="NUMBER1"></td>
+        <td><input   id="c2" PLACEHOLDER="NUMBER2"></td>
+        <td><button id="mul" onclick="result3()" >RESULT</button></td>
+        <td><button id="mulreset" onclick="reset3()" >RESET</button></td>
+    </tr>
+    <tr>
+        <td>DIVISION</td>
+        <td><input  id="d1" PLACEHOLDER="NUMBER1"></td>
+        <td><input   id="d2" PLACEHOLDER="NUMBER2"></td>
+        <td><button id="div" onclick="result4()" >RESULT</button></td>
+        <td><button id="divreset" onclick="reset4()" >RESET</button></td>
+    </tr>
+
+</table>
+</body>
+<script src="tables_homework.js"></script>
+</html>

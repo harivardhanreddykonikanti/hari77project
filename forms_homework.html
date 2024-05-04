@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form tages homework</title>
+    <style>
+        h1{
+            text-align: center;
+            background: linear-gradient(70deg,blue,midnightblue,blue,blueviolet);
+            color: white;
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            padding: 10px;
+        }
+        label{
+            margin-left: 50px;
+        }
+
+        #signup{
+            height: 450px;
+            width: 500px;
+            border: 5px solid deepskyblue;
+            display: inline-block;
+            float: left;
+            margin-left: 70px;
+            box-shadow: 0 0 10px blue;
+        }
+        #login{
+            height: 450px;
+            width: 500px;
+            border: 5px solid royalblue;
+            display: inline-block;
+            float: right;
+            box-shadow: 0 0 10px blue;
+        }
+        
+        h3{
+            text-align: center;
+        }
+        input{
+            margin-bottom: 20px;
+                    }
+        label{
+            position: relative;
+            left: 20px;
+        }
+        #container{
+            height: 500px;
+            width: 1300px;
+            display: inline-block;
+        }
+        #fristname,#lastname,#fullname{
+            margin-left: 70px;
+        }
+        #email,#phoneno{
+            margin-left: 30px;
+        }
+        #radio{
+            text-align: right!important;
+            margin-left: 90px;!important;
+        }
+        #calender{
+            margin-left: 40px;
+        }
+        #submit{
+            margin-left: 140px;
+            margin-top: 40px;
+        }
+        #reset{
+            margin-left: 40px;
+        }
+        #username,#password{
+            margin-left: 50px;
+        }
+        #loginn{
+            margin-left: 250px;   
+            margin-top: 20px;
+        }
+        h3{
+            background-color: deepskyblue;
+            margin-top: 0px;
+        }
+        body{
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        #file{
+            margin-left: 50px;
+        }
+        #submit:hover{
+            color: black;
+            background-color: deepskyblue;
+            font-size: 14px;
+        }
+        #reset:hover{
+            color: black;
+            background-color:deepskyblue;
+            font-size: 14px;
+        }
+        #loginn:hover{
+            color: black;
+            background-color:royalblue;
+            font-size: 14px;
+        }
+        label{
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1>WELCOME TO MOVIE RULZ</h1>
+<div id="container">
+<form action="">
+<div id="signup">
+    <h3>SIGNUP</h3>
+    <label for="fristname">FRIST NAME</label>
+    <input type="text"id="fristname" pattern="[A-Za-z]{3,8}" title="BETWEEN 3 TO 8 CHARECTERS" placeholder="fristname" required><br>
+    <label for="lastname">LAST NAME</label>
+    <input type="text"  id="lastname" pattern="[A-Za-z]{3,8}" title="BETWEEN 3 TO 8 CHARECTERS" placeholder="lastname" required ><br>
+    <label for="fullname">FULL NAME</label>
+    <input type="text" name="" id="fullname" placeholder="fullname"><br>
+    <label for="email">EMAIL ADDRESS</label>
+    <input type="email" name="" id="email" placeholder="email address" required><br>
+    <label for="phoneno">PHONE NUMBER</label>
+    <input type="text" pattern="[0-9]{10}" title="enter valid nummber" id="phoneno" placeholder="phone number"required><br>
+    <label for="radio">GENDER</label>
+    <input type="radio" id="radio" name="gender" value="male">MALE
+    <input type="radio" id="radio2" name="gender" value="female">FEMALE<br>
+    <label for="calender">DATE OF BIRTH</label>
+    <input type="date" id="calender"><br>
+    <label for="file" >YOUR PHOTO</label>
+    <input type="file" id="file">
+    <input type="submit" onclick="submited()" id="submit" value="SUBMIT">
+    <input type="reset" id="reset" value="RESET">
+</div>
+</form>
+<div id="login">
+        <h3 style="background-color: royalblue">LOGIN</h3>
+    <label for="username">USERNAME</label>
+    <input style="margin-top: 100px" type="text" id="username" placeholder="username"><br>
+    <label for="password">PASSWORD</label>
+    <input type="password" id="password" placeholder="password"><br>
+    <button id="loginn">LOGIN</button>
+
+
+</div>
+</div>
+
+
+</body>
+<script src="forms_homework.js"></script>
+</html>
